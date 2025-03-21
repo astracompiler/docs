@@ -16,29 +16,3 @@ astra install
 # Show available Node.js versions
 astra versions
 ```
-
----
-
-## ⚙️ Configuration: `astra.config.js`
-
-Create a config file at the root of your project:
-
-```js
-/** @type {import('astra-cli/configtypes').Config} */
-export default {
-  outFile: 'dist/app.exe',
-
-  esbuild: {
-    // esbuild options (optional)
-  },
-
-  exe: {
-    companyName: 'Your Company',            // your company name
-    productName: 'Your App',                // name of your app
-    fileDescription: 'Your App Description',// description of your app
-    productVersion: '1.0.0',                // version of your app
-    fileVersion: '1.0.0.0',                 // file version
-    icon: 'path/to/icon.ico',               // path to the app icon (optional)
-  }
-}
-```
