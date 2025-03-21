@@ -8,6 +8,7 @@ export default defineConfig({
 		starlight({
 			title: 'Astra',
 			social: {
+				npm: 'https://www.npmjs.com/package/astra-cli',
 				github: 'https://github.com/astracompiler',
 			},
 			sidebar: [
@@ -17,6 +18,7 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Introduction', slug: 'cli/introduction' },
 						{ label: 'Installation', slug: 'cli/installation' },
+						{ label: 'Usage', slug: 'cli/usage' },
 					],
 				},
 			],

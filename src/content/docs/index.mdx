@@ -5,20 +5,20 @@ template: splash
 hero:
   tagline: 🚀 Fast, reliable and easy-to-use js-to-exe compiler.
   image:
-    file: ../../assets/astra.webp
+    html: <img src="/astra.webp" alt="Astra Logo" width="200" class="hero-image"/>
   actions:
     - text: Compile with Astra
       link: /cli/installation
       icon: right-arrow
     - text: GitHub
       link: https://github.com/astracompiler
-      icon: external
+      icon: github
       variant: minimal
 footer:
   text: "Made with ❤️ by the Astra team."
 ---
-
-import { Card, CardGrid, Spacer } from '@astrojs/starlight/components';
+import '../../styles.css';
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## Why Astra?
 
@@ -36,7 +36,7 @@ import { Card, CardGrid, Spacer } from '@astrojs/starlight/components';
 		Working in plane? No problem! Astra can compile your code without internet.
 	</Card>
 	<Card title="Modern CLI" icon="sun">
-		A modern command-line interface designed for speed, clarity, and developer experience.
+		A modern command-line interface designed for speed, clarity, and developers experience.
 	</Card>
 	<Card title="Written in TypeScript" icon="seti:typescript">
 		For developer who want to contribute in Astra project.
