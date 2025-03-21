@@ -1,0 +1,46 @@
+---
+title: Introduction
+description: Get started with Astra CLI
+---
+## What's Astra?
+Astra is js to exe compiler.
+It's compiles your javascript code to a standalone executable file.
+
+## Use Cases
+- Make a commercial application without source code.
+- Use your node.js application on a machine without node.js installed.
+- For apps like installers, updaters, etc.
+- Make a trial/demo version of your application.
+
+## Why Astra?
+Astra is designed to build standalone executables effortlessly.
+I wanted simple tool to compile my source code to exe without any hassle, and I couldn't find one.
+So, I built one.
+
+## Why... not?
+### [nexe](https://npmjs.com/package/nexe)
+Nexe is a great tool, but it's not as simple as Astra. 
+- it's biggest cons is that it's supporting latest vesions of node.js.
+- has very poor esm support.
+
+#### Use it instead of Astra if:
+- You are using older version of node.js.
+
+### [pkg](https://npmjs.com/package/pkg)
+pkg is a great tool, i used it for a long time.
+- it's biggest cons is it generates heavy executables.
+- it's not supporting esm.
+
+#### Use it instead of Astra if:
+- You are not concerned about the size of the executable.
+- You are not using esm.
+- You are using older version of node.js.
+
+# Under the hood
+Astra uses native method of compilation called [Node SEA](https://nodejs.org/api/single-executable-applications.html) (Single Executable Applications) to compile your source code to exe.
+Astra is wrapper around Node SEA, with some additional features.
+Astra injects your code into node.exe file with [postject](https://npmjs.com/package/postject).
+
+For bundling, Astra uses [esbuild](https://npmjs.com/package/esbuild). It's the best bundler out on npm.
+
+For editing icon and metadata, Astra uses [rcedit](https://github.com/electron/rcedit).

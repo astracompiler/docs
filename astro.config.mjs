@@ -6,21 +6,18 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Astra',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/astracompiler',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'CLI',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Introduction', slug: 'cli/introduction' },
+						{ label: 'Installation', slug: 'cli/installation' },
 					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
 				},
 			],
 		}),

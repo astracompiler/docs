@@ -1,0 +1,28 @@
+---
+title: Installation
+description: Install Astra on your machine
+---
+
+Installation is simple as one, two, three!
+``` bash
+# npm 
+npm i -g astra-cli
+# yarn
+yarn global add astra-cli
+# pnpm
+pnpm add -g astra-cli
+```
+Check your installation
+``` bash
+astra -v
+```
+### 'astra' is not recognized as an internal or external command
+
+1. Type `npm bin -g` (or `yarn bin`, `pnpm bin`) to get the path where npm installs global packages, copy the path.
+2. Click windows type `environment variables` and click on `Edit the system environment variables`.
+3. On left bottom click on `Environment Variables...`.
+4. In the `User variables` section, select `Path` and click `Edit...`.
+5. Click `New` and paste the path you copied from step 1.
+6. Click `OK` on all the windows.
+7. Restart your terminal.
+8. Done!

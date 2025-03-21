@@ -1,36 +1,47 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: Astra
+description: Start compiling with Astra
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: 🚀 Fast, reliable and easy-to-use js-to-exe compiler.
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/astra.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Compile with Astra
+      link: /cli/installation
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: GitHub
+      link: https://github.com/astracompiler
       icon: external
       variant: minimal
+footer:
+  text: "Made with ❤️ by the Astra team."
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, Spacer } from '@astrojs/starlight/components';
 
-## Next steps
+## Why Astra?
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Fast and optimized" icon="seti:css">
+		With esbuild and postject you can compile your js code to exe in seconds.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="ESM and CJS support" icon="node">
+		Unlike pkg, Astra supports both ESM (partially) and CJS modules.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
+	<Card title="Make exe your own" icon="pencil">
+		Astra natively supports customizing the exe icon and metadata (version, copyright etc.).
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Offline mode" icon="close">
+		Working in plane? No problem! Astra can compile your code without internet.
+	</Card>
+	<Card title="Modern CLI" icon="sun">
+		A modern command-line interface designed for speed, clarity, and developer experience.
+	</Card>
+	<Card title="Written in TypeScript" icon="seti:typescript">
+		For developer who want to contribute in Astra project.
 	</Card>
 </CardGrid>
+
+<hr/>
+Made with ❤️ by <a target="_blank" href="https://qwerty.daxel.pl">QwertyCodeQC</a>. MIT License.
