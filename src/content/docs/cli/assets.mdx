@@ -1,0 +1,33 @@
+---
+title: Assets
+description: Asstes in sea binary
+---
+You can hide assets in your binary by setting `assets` field in the config. eg.
+
+``` js
+export default {
+    assets: {
+        "path/in/binary.txt": "path/to/asset.txt"
+    }
+}
+```
+
+Now you can access the asset using
+
+``` js
+import { getAssetAsBlob, getAsset, isSea } from "node:sea";
+import fs from "fs";
+
+(async () => {
+    if (isSea()) {
+        // get asset as text
+        console.log(getAsset("file.txt", "utf-8"));
+        // or
+        console.log(await getAssetAsBlob("file.txt").text());
+        
+        // get asset as blob
+        const arrayBuffer = await getAssetAsBlob("file.png").arrayBuffer();
+        fs.writeFileSync("file.png", Buffer.from(arrayBuffer));
+    }
+})();
+```
