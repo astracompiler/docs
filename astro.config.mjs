@@ -29,7 +29,7 @@ export default defineConfig({
 						{ label: 'Commands', slug: 'cli/commands' },
 						{ label: 'Assets', slug: 'cli/assets' },
 						{ label: 'Configuration', slug: 'cli/configuration' },
-						//{ label: 'FAQ', slug: 'cli/faq' },
+						{ label: 'FAQ', slug: 'cli/faq' },
 					],
 				},
 			],
