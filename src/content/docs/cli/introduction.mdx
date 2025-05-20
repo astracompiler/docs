@@ -12,6 +12,36 @@ It's compiles your javascript code to a standalone executable file.
 - For apps like installers, updaters, etc.
 - Make a trial/demo version of your application.
 
+## Everything you have to know
+- Astra is compiling to windows only for now. (working on macOS and linux)
+- Astra is using Node SEA (Single Executable Applications) to compile your code. It's still an experimental feaurte and things may crash unexpectedly.
+- Average size of the executable is around 70~80 MB. (depends on your code)
+
+## Unsupported depencencies (to have used in your code)
+- esbuild
+- bcrypt
+- sharp
+- sqlite3
+- better-sqlite3
+- canvas
+- serialport
+- ffi-napi
+- @node-rs/bcrypt
+- keytar
+- robotjs
+- node-notifier
+- puppeteer
+- playwright
+- cypress
+- node-sass (deprecated)
+- edge-js
+
+And other using native solutions (`.h`, `.node`, `.dll`, `.so`, `.dylib`, `.exe`) or native modules.
+
+### But... why?
+Astra uses esbuild to bundle your code.
+esbuild is a great bundler, but it doesn't support native modules and leaves them unbundled (external).
+
 ## Why Astra?
 Astra is designed to build standalone executables effortlessly.
 I wanted simple tool to compile my source code to exe without any hassle, and I couldn't find one.
