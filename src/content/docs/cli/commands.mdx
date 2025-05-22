@@ -2,7 +2,7 @@
 title: Commands
 description: Astra CLI commands
 ---
-## astra versions
+## `astra versions`
 Check available Node.js versions for compilation.
 
 Astra can compile only specific versions of Node.js (>20.0.0).
@@ -13,7 +13,7 @@ This command will show you the list of available versions.
 astra versions
 ```
 
-## astra install
+## `astra install`
 Preinstall Node.js on the target machine. 
 
 Astra needs a preinstalled node.exe in cache to compile your code.
@@ -27,7 +27,7 @@ Useful when you are working offline.
 astra install [version (optional)]
 ```
 
-## astra build
+## `astra build`
 Compile your code to an executable.
 
 ### Usage
@@ -39,4 +39,13 @@ If you want build creator do not pass any arguments.
 You have to pass all arguments or none of them.
 - `-o --outDir` - Output directory for the executable.
 - `-n --node` - Node.js version to compile with. (in astra format eg. node_20.0.0_win_x64)
+- `--noMetadata` - Disable metadata modification. This will skip metadata modification process of the executable.
 - `--disShasumCheck` - Disable shasum check for node.exe. This will skip validation process of node.exe binary. (only enable if you know what you are doing!!)
+
+## `astra init`
+Create `astra.config.js` file in the current directory.
+
+### Usage
+```bash
+astra init
+```
