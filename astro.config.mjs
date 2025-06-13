@@ -8,6 +8,21 @@ export default defineConfig({
 		starlight({
 			head: [
 				{tag: 'script', attrs: {src: 'https://buttons.github.io/buttons.js', defer: true}},
+				// Init Google Analytics
+				{
+					tag: 'script',
+					attrs: {
+						async: true,
+						src: 'https://www.googletagmanager.com/gtag/js?id=G-KXY4BMLJSG'
+					}
+				},
+				{
+					tag: 'script',
+					content: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KXY4BMLJSG');`
+				}
 			],
 			favicon: '/favicon.svg',
 			title: 'Astra',
